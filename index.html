@@ -6,435 +6,341 @@
   <title>SunOrbit Solutions Pvt. Ltd. | Solar EPC & Clean Energy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            dark: '#0F172A',
-            teal: '#14B8A6',
-            amber: '#F59E0B',
-            ocean: '#0EA5E9',
-            mint: '#A7F3D0',
-            sand: '#FDE68A'
-          },
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui']
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
-  <header class="sticky top-0 z-30 backdrop-blur bg-white/80 border-b border-slate-100">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <div class="flex items-center gap-2">
-        <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-teal via-ocean to-amber flex items-center justify-center text-white font-semibold">SO</div>
-        <div class="text-lg font-bold text-dark">SunOrbit Solutions</div>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="logo-mark" aria-label="SunOrbit Solutions logo">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <defs>
+            <linearGradient id="sunOrbitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#22d3ee" />
+              <stop offset="50%" stop-color="#a855f7" />
+              <stop offset="100%" stop-color="#f97316" />
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="60" r="38" fill="none" stroke="url(#sunOrbitGrad)" stroke-width="10" stroke-dasharray="30 14" />
+          <circle cx="60" cy="60" r="14" fill="url(#sunOrbitGrad)"></circle>
+        </svg>
+        <div class="logo-type">
+          <span class="logo-name">SunOrbit</span>
+          <span class="logo-tag">Engineering clean energy</span>
+        </div>
       </div>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">
-        <a href="#home" class="hover:text-teal transition">Home</a>
-        <a href="#about" class="hover:text-teal transition">About</a>
-        <a href="#services" class="hover:text-teal transition">Services</a>
-        <a href="#projects" class="hover:text-teal transition">Projects</a>
-        <a href="#clients" class="hover:text-teal transition">Clients</a>
-        <a href="#careers" class="hover:text-teal transition">Careers</a>
-        <a href="#contact" class="hover:text-teal transition">Contact</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="pill-btn" href="#contact">Talk to us</a>
       </nav>
-      <div class="flex items-center gap-3">
-        <a href="#contact" class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark text-white text-sm font-semibold shadow hover:shadow-lg transition hover:-translate-y-0.5">Let’s talk</a>
-        <button id="menuToggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 text-dark focus:outline-none">
-          <span class="sr-only">Toggle navigation</span>
-          <div class="space-y-1.5">
-            <span class="block h-0.5 w-6 bg-dark"></span>
-            <span class="block h-0.5 w-6 bg-dark"></span>
-            <span class="block h-0.5 w-6 bg-dark"></span>
-          </div>
-        </button>
-      </div>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-100 bg-white">
-      <div class="max-w-6xl mx-auto px-4 py-4 grid gap-4 text-sm font-medium text-slate-700">
-        <a href="#home" class="hover:text-teal">Home</a>
-        <a href="#about" class="hover:text-teal">About</a>
-        <a href="#services" class="hover:text-teal">Services</a>
-        <a href="#projects" class="hover:text-teal">Projects</a>
-        <a href="#clients" class="hover:text-teal">Clients</a>
-        <a href="#careers" class="hover:text-teal">Careers</a>
-        <a href="#contact" class="hover:text-teal">Contact</a>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section id="home" class="relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-teal/10 via-ocean/10 to-amber/10"></div>
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center relative">
-        <div class="space-y-6">
-          <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white shadow text-sm text-teal font-semibold">Solar EPC & Clean Energy Solutions</p>
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-dark leading-tight">Powering India’s Clean Energy Future</h1>
-          <p class="text-lg text-slate-700">SunOrbit Solutions Pvt. Ltd. delivers end-to-end solar EPC, O&M, asset management, and advisory services across India with reliability, speed, and bankability.</p>
-          <div class="flex flex-wrap items-center gap-3">
-            <a href="#contact" class="px-5 py-3 rounded-full bg-dark text-white font-semibold shadow hover:shadow-xl transition hover:-translate-y-0.5">Contact Us</a>
-            <button id="heroWhatsapp" class="px-5 py-3 rounded-full bg-white text-dark border border-slate-200 font-semibold shadow hover:-translate-y-0.5 transition">WhatsApp Us</button>
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <div class="eyebrow">Solar EPC & Clean Energy Platform</div>
+          <h1>Powering India’s clean energy with engineering precision.</h1>
+          <p class="lead">SunOrbit Solutions delivers high-performance solar EPC, O&M, and digital asset management across India—designed for reliability, bankability, and speed.</p>
+          <div class="hero-ctas">
+            <a class="cta primary" href="#contact">Contact us</a>
+            <button class="cta ghost" id="hero-whatsapp">Chat on WhatsApp</button>
           </div>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
-            <div class="rounded-2xl bg-white shadow-sm p-4 border border-slate-100">
-              <div class="text-lg font-bold text-dark">50+ MWp</div>
-              <p class="text-xs text-slate-600">solar capacity delivered</p>
-            </div>
-            <div class="rounded-2xl bg-white shadow-sm p-4 border border-slate-100">
-              <div class="text-lg font-bold text-dark">Since 2019</div>
-              <p class="text-xs text-slate-600">reliable operations</p>
-            </div>
-            <div class="rounded-2xl bg-white shadow-sm p-4 border border-slate-100">
-              <div class="text-lg font-bold text-dark">Pan-India</div>
-              <p class="text-xs text-slate-600">project footprint</p>
-            </div>
-            <div class="rounded-2xl bg-white shadow-sm p-4 border border-slate-100">
-              <div class="text-lg font-bold text-dark">50+ pros</div>
-              <p class="text-xs text-slate-600">engineers & specialists</p>
-            </div>
+          <div class="hero-stats">
+            <div class="stat-card"><span>50+ MWp</span><small>Solar capacity delivered</small></div>
+            <div class="stat-card"><span>2019</span><small>Operational since</small></div>
+            <div class="stat-card"><span>Pan-India</span><small>Project footprint</small></div>
+            <div class="stat-card"><span>50+ experts</span><small>Engineers & PMs</small></div>
           </div>
         </div>
-        <div class="relative">
-          <div class="absolute -top-6 -left-6 w-28 h-28 bg-gradient-to-br from-teal to-amber rounded-3xl blur-3xl opacity-30"></div>
-          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50">
-            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80" alt="Engineers inspecting solar panels" class="w-full h-full object-cover">
+        <div class="hero-visual">
+          <div class="orbit"></div>
+          <div class="panel-card floating">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80" alt="Solar engineers inspecting panels">
+            <div class="panel-info">
+              <p>Live telemetry</p>
+              <h3>Utility-scale supervision</h3>
+              <span class="pulse">99.2% uptime</span>
+            </div>
           </div>
-          <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-ocean to-dark rounded-3xl blur-3xl opacity-40"></div>
+          <div class="chip-grid">
+            <div class="chip">Design-Build</div>
+            <div class="chip">SCADA</div>
+            <div class="chip">O&M Automation</div>
+            <div class="chip">EV Charging</div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="about" class="py-16 lg:py-24">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div class="flex flex-col gap-3 text-center">
-          <p class="text-sm font-semibold text-teal">About</p>
-          <h2 class="text-3xl font-bold text-dark">About SunOrbit Solutions</h2>
-          <p class="text-slate-600 max-w-3xl mx-auto">A trusted solar EPC partner delivering reliable, bankable, and future-ready clean energy projects across India.</p>
+      <section class="section about" id="about">
+        <div class="section-header">
+          <p class="eyebrow">About</p>
+          <h2>SunOrbit Solutions Pvt. Ltd.</h2>
+          <p class="section-lead">Engineering-led solar EPC partner delivering end-to-end design, construction, commissioning, and lifecycle performance across India.</p>
         </div>
-        <div class="grid lg:grid-cols-3 gap-6">
-          <div class="lg:col-span-2 bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
-            <h3 class="text-xl font-semibold text-dark">Who We Are</h3>
-            <p class="text-slate-700">SunOrbit Solutions Pvt. Ltd. is a leading solar EPC company with 50+ MWp of installations across India. We deliver end-to-end solar solutions covering design, detailed engineering, procurement, construction, commissioning, operations, and maintenance.</p>
-            <p class="text-slate-700">Our teams combine field experience with data-driven decision-making to ensure high-performing assets. From rooftop systems to utility-scale plants, we focus on reliability, safety, and lifecycle performance.</p>
-            <p class="text-slate-700">We align with our customers’ sustainability goals, ensuring every project is bankable, scalable, and simple to operate for decades.</p>
-            <div class="grid sm:grid-cols-3 gap-4 pt-2">
-              <div class="flex items-start gap-3">
-                <span class="text-2xl">⚡</span>
-                <p class="text-sm text-slate-600">High-efficiency system design and optimized generation.</p>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-2xl">🛡️</span>
-                <p class="text-sm text-slate-600">Safety-first culture with rigorous QA/QC and compliance.</p>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-2xl">🌏</span>
-                <p class="text-sm text-slate-600">Sustainability-driven outcomes and long-term stewardship.</p>
-              </div>
-            </div>
+        <div class="about-grid">
+          <div class="about-card glass">
+            <h3>Who we are</h3>
+            <p>We are a leading solar EPC specialist with over 50 MWp commissioned across rooftops, ground mounts, and bespoke industrial systems. Our multidisciplinary engineers, project managers, and analysts ensure each asset is bankable, reliable, and future-ready.</p>
+            <p>From concept and feasibility to procurement, construction, commissioning, and O&M, we integrate safety, digital monitoring, and performance guarantees to maximize energy yield.</p>
+            <p>Our philosophy: reliable power, clean execution, and transparent delivery for industrial, commercial, and community-scale clients across India.</p>
           </div>
-          <div class="bg-gradient-to-br from-white to-mint/60 rounded-2xl border border-teal/10 shadow p-6 space-y-4">
-            <h3 class="text-xl font-semibold text-dark">Growth Story</h3>
-            <div class="space-y-4">
-              <div class="timeline-item">
-                <p class="text-xs font-semibold text-teal">2019</p>
-                <p class="text-sm text-dark">Founded as a renewable energy solutions provider.</p>
-              </div>
-              <div class="timeline-item">
-                <p class="text-xs font-semibold text-teal">2020</p>
-                <p class="text-sm text-dark">Entered full operations with a focused core team.</p>
-              </div>
-              <div class="timeline-item">
-                <p class="text-xs font-semibold text-teal">2021</p>
-                <p class="text-sm text-dark">Diversified into consulting, capacity development, and project supervision.</p>
-              </div>
-              <div class="timeline-item">
-                <p class="text-xs font-semibold text-teal">2022</p>
-                <p class="text-sm text-dark">Added installation and project design capabilities for rooftops and ground mounts.</p>
-              </div>
-              <div class="timeline-item">
-                <p class="text-xs font-semibold text-teal">2023</p>
-                <p class="text-sm text-dark">Scaled to a larger delivery team handling bigger projects nationwide.</p>
-              </div>
-              <div class="timeline-item">
-                <p class="text-xs font-semibold text-teal">2024–25</p>
-                <p class="text-sm text-dark">Continuing to scale and push the limits in renewable energy.</p>
-              </div>
+          <div class="growth glass">
+            <h3>Growth story</h3>
+            <div class="timeline">
+              <div class="milestone"><span>2019</span><p>Founded as a focused renewable solutions studio.</p></div>
+              <div class="milestone"><span>2020</span><p>Scaled core EPC operations with a specialized team.</p></div>
+              <div class="milestone"><span>2021</span><p>Expanded into consulting, capacity development, and supervision.</p></div>
+              <div class="milestone"><span>2022</span><p>Added advanced installation and project design capabilities.</p></div>
+              <div class="milestone"><span>2023</span><p>Delivered larger industrial projects across India with digital monitoring.</p></div>
+              <div class="milestone"><span>2024–2025</span><p>Scaling asset management, SCADA, and EV-integrated systems.</p></div>
             </div>
           </div>
         </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
-            <h3 class="text-xl font-semibold text-dark mb-2">Vision</h3>
-            <p class="text-slate-700">Empower industries, utilities, and communities with affordable, sustainable, and reliable solar energy, making the transition simple, bankable, and scalable.</p>
+        <div class="vision-mission">
+          <div class="vision glass">
+            <h3>Vision</h3>
+            <p>Empower industries and communities with affordable, reliable solar energy—making adoption simple, bankable, and scalable.</p>
           </div>
-          <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
-            <h3 class="text-xl font-semibold text-dark mb-2">Mission</h3>
-            <p class="text-slate-700">Make solar energy available to everyone through high-efficiency solutions, excellent service, and strong environmental stewardship.</p>
+          <div class="mission glass">
+            <h3>Mission</h3>
+            <p>Deliver high-efficiency solar solutions with engineering rigor, responsive service, and deep environmental stewardship.</p>
           </div>
         </div>
-        <div class="space-y-4">
-          <div class="flex items-start justify-between gap-4 flex-wrap">
-            <div>
-              <h3 class="text-2xl font-bold text-dark">Leadership Team</h3>
-              <p class="text-slate-600">Experienced professionals driving execution excellence.</p>
-            </div>
+        <div class="team">
+          <div class="section-header compact">
+            <p class="eyebrow">Leadership</p>
+            <h3>Management Team</h3>
           </div>
-          <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="Managing Director" class="h-48 w-full object-cover">
-              <div class="p-5 space-y-2">
-                <h4 class="text-lg font-semibold text-dark">Arjun Mehta</h4>
-                <p class="text-sm text-teal font-semibold">Managing Director</p>
-                <p class="text-sm text-slate-700">15+ years in renewable energy project development, leading multi-megawatt solar EPC programs with a focus on safety and delivery.</p>
+          <div class="team-grid">
+            <div class="team-card glass">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Leader portrait">
+              <div>
+                <h4>Ananya Rao</h4>
+                <p class="role">Managing Director</p>
+                <p>15+ years in renewable project finance and utility-scale solar delivery across India.</p>
               </div>
             </div>
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Business Development Head" class="h-48 w-full object-cover">
-              <div class="p-5 space-y-2">
-                <h4 class="text-lg font-semibold text-dark">Priya Nair</h4>
-                <p class="text-sm text-teal font-semibold">Head – Business Development</p>
-                <p class="text-sm text-slate-700">Drives partnerships with industrial clients and IPPs, aligning solar solutions with financial, regulatory, and ESG priorities.</p>
+            <div class="team-card glass">
+              <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80" alt="Leader portrait">
+              <div>
+                <h4>Rohan Mehta</h4>
+                <p class="role">Head of Business Development</p>
+                <p>Drives partnerships, policy alignment, and go-to-market for rooftop and ground-mount portfolios.</p>
               </div>
             </div>
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80&sat=-20" alt="Finance Head" class="h-48 w-full object-cover">
-              <div class="p-5 space-y-2">
-                <h4 class="text-lg font-semibold text-dark">Rohan Kulkarni</h4>
-                <p class="text-sm text-teal font-semibold">Head – Finance & Strategy</p>
-                <p class="text-sm text-slate-700">Specialist in project finance, compliance, and risk mitigation ensuring bankable, investment-ready clean energy assets.</p>
+            <div class="team-card glass">
+              <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80" alt="Leader portrait">
+              <div>
+                <h4>Priya Nair</h4>
+                <p class="role">Head of Engineering & O&M</p>
+                <p>Leads design, commissioning, and digital O&M standards ensuring performance uptime.</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="services" class="py-16 lg:py-24 bg-gradient-to-b from-white via-slate-50 to-mint/40">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        <div class="text-center space-y-3">
-          <p class="text-sm font-semibold text-teal">Services</p>
-          <h2 class="text-3xl font-bold text-dark">Integrated Solar & Clean Energy Services</h2>
-          <p class="text-slate-600 max-w-3xl mx-auto">Comprehensive offerings that keep your assets performing from design to lifetime operations.</p>
+      <section class="section services" id="services">
+        <div class="section-header">
+          <p class="eyebrow">Services</p>
+          <h2>End-to-end solar execution</h2>
+          <p class="section-lead">Integrated EPC, commissioning, monitoring, and lifecycle care built for industrial reliability.</p>
         </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="service-card">
-            <div class="service-icon bg-teal/10 text-teal">⚙️</div>
-            <h3 class="service-title">EPC Solutions</h3>
-            <p class="service-text">End-to-end engineering, procurement, and construction for rooftop and ground-mounted solar systems with strong safety and quality control.</p>
+        <div class="service-grid">
+          <div class="service-card glass">
+            <div class="icon">⚙️</div>
+            <h3>EPC Solutions</h3>
+            <p>Full-stack design-build for rooftop and ground-mount assets with bankable engineering, procurement, and construction rigor.</p>
           </div>
-          <div class="service-card">
-            <div class="service-icon bg-ocean/10 text-ocean">🛠️</div>
-            <h3 class="service-title">Installation & Commissioning</h3>
-            <p class="service-text">Professional installation teams delivering safe, compliant commissioning to achieve guaranteed performance benchmarks.</p>
+          <div class="service-card glass">
+            <div class="icon">🛠️</div>
+            <h3>Installation & Commissioning</h3>
+            <p>Safe, standards-driven installation and commissioning with QA/QC, testing protocols, and performance sign-off.</p>
           </div>
-          <div class="service-card">
-            <div class="service-icon bg-amber/10 text-amber">📡</div>
-            <h3 class="service-title">Asset Management & Monitoring</h3>
-            <p class="service-text">Real-time monitoring, analytics, and performance optimization to maximize yield and availability.</p>
+          <div class="service-card glass">
+            <div class="icon">📡</div>
+            <h3>Asset Management & Monitoring</h3>
+            <p>Real-time analytics, SCADA integration, and predictive insights to keep assets optimized and transparent.</p>
           </div>
-          <div class="service-card">
-            <div class="service-icon bg-teal/10 text-teal">🧰</div>
-            <h3 class="service-title">Operations & Maintenance</h3>
-            <p class="service-text">Preventive and corrective maintenance, cleaning, inspections, and tuning to keep plants healthy year-round.</p>
+          <div class="service-card glass">
+            <div class="icon">🧹</div>
+            <h3>Operations & Maintenance</h3>
+            <p>Preventive and corrective programs, cleaning, thermography, and performance tuning for maximum uptime.</p>
           </div>
-          <div class="service-card">
-            <div class="service-icon bg-ocean/10 text-ocean">🔧</div>
-            <h3 class="service-title">Rectification & Restoration</h3>
-            <p class="service-text">Deep diagnostics of underperforming plants with rapid restoration to optimal generation.</p>
+          <div class="service-card glass">
+            <div class="icon">🩺</div>
+            <h3>Rectification & Restoration</h3>
+            <p>Diagnostics, retrofits, and restoration of underperforming plants to recover yield swiftly.</p>
           </div>
-          <div class="service-card">
-            <div class="service-icon bg-amber/10 text-amber">🔋</div>
-            <h3 class="service-title">Component Supply & Technical Services</h3>
-            <p class="service-text">Certified modules, inverters, structures, and BOS components with technical integration support.</p>
+          <div class="service-card glass">
+            <div class="icon">🔧</div>
+            <h3>Component Supply & Technical Services</h3>
+            <p>Certified modules, inverters, structures, and technical advisory to de-risk procurement.</p>
           </div>
-          <div class="service-card">
-            <div class="service-icon bg-teal/10 text-teal">🚗</div>
-            <h3 class="service-title">EV Charging Setup & Commissioning</h3>
-            <p class="service-text">Design and deploy EV charging stations powered by clean energy with smart controls and reliability.</p>
+          <div class="service-card glass">
+            <div class="icon">⚡</div>
+            <h3>EV Charging Setup</h3>
+            <p>Integrated EV charging stations with solar and storage alignment for campuses and fleets.</p>
           </div>
-          <div class="service-card">
-            <div class="service-icon bg-ocean/10 text-ocean">📑</div>
-            <h3 class="service-title">Consultancy in Solar Energy</h3>
-            <p class="service-text">Feasibility studies, engineering advisory, policy and regulatory guidance, and financial modeling.</p>
+          <div class="service-card glass">
+            <div class="icon">🧭</div>
+            <h3>Consultancy</h3>
+            <p>Feasibility, engineering advisory, policy guidance, and financial modeling for solar programs.</p>
           </div>
-          <div class="service-card">
-            <div class="service-icon bg-amber/10 text-amber">🏠</div>
-            <h3 class="service-title">Residential Rooftop Systems</h3>
-            <p class="service-text">Tailored rooftop systems for homes, on-grid or off-grid, with storage-ready options.</p>
+          <div class="service-card glass">
+            <div class="icon">🏠</div>
+            <h3>Residential Rooftop</h3>
+            <p>On/off-grid rooftop systems for homes with lifecycle monitoring and service.</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="projects" class="py-16 lg:py-24">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        <div class="text-center space-y-3">
-          <p class="text-sm font-semibold text-teal">Projects</p>
-          <h2 class="text-3xl font-bold text-dark">Projects & Delivery Spectrum</h2>
-          <p class="text-slate-600 max-w-3xl mx-auto">Representative project highlights showcasing our pan-India footprint.</p>
+      <section class="section projects" id="projects">
+        <div class="section-header">
+          <p class="eyebrow">Projects</p>
+          <h2>Delivery across India</h2>
+          <p class="section-lead">Sample deployments combining engineering discipline and fast-track execution.</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="project-card">
-            <div class="project-meta">Rooftop RCC • Maharashtra</div>
-            <h3 class="project-title">Metro Components Pvt. Ltd.</h3>
-            <p class="project-capacity">1.2 MWp capacity • O&M + monitoring</p>
+        <div class="project-grid">
+          <div class="project-card glass">
+            <div class="pill">Rooftop RCC</div>
+            <h3>Industrial rooftop array</h3>
+            <p class="meta">1.2 MWp · Pune, Maharashtra</p>
+            <p>High-efficiency modules with rapid shutdown, IoT monitoring, and structured O&M.</p>
           </div>
-          <div class="project-card">
-            <div class="project-meta">Ground Mount • Rajasthan</div>
-            <h3 class="project-title">Desert Utility Solar Park</h3>
-            <p class="project-capacity">8.5 MWp capacity • EPC + asset care</p>
+          <div class="project-card glass">
+            <div class="pill">Ground mount</div>
+            <h3>Agri-solar park</h3>
+            <p class="meta">5 MWp · Anantapur, Andhra Pradesh</p>
+            <p>Single-axis tracking with digital SCADA and predictive maintenance models.</p>
           </div>
-          <div class="project-card">
-            <div class="project-meta">Metal Shed Rooftop • Gujarat</div>
-            <h3 class="project-title">Harbor Logistics Hub</h3>
-            <p class="project-capacity">750 kWp capacity • Performance revamp</p>
+          <div class="project-card glass">
+            <div class="pill">Metal shed</div>
+            <h3>Warehouse rooftop</h3>
+            <p class="meta">850 kWp · Ahmedabad, Gujarat</p>
+            <p>Lightweight structures, anti-corrosive mounts, and integrated asset care.</p>
           </div>
-          <div class="project-card">
-            <div class="project-meta">Water Pumping • Uttar Pradesh</div>
-            <h3 class="project-title">Agro Solar Lift Scheme</h3>
-            <p class="project-capacity">250 kWp capacity • I&C + monitoring</p>
-          </div>
-          <div class="project-card">
-            <div class="project-meta">EV + Solar • Karnataka</div>
-            <h3 class="project-title">Tech Park Carport</h3>
-            <p class="project-capacity">600 kWp capacity • EV-ready carports</p>
-          </div>
-          <div class="project-card">
-            <div class="project-meta">On/Off-Grid • Kerala</div>
-            <h3 class="project-title">Coastal Resorts Cluster</h3>
-            <p class="project-capacity">320 kWp capacity • Hybrid storage</p>
+          <div class="project-card glass">
+            <div class="pill">Water pump</div>
+            <h3>Solar irrigation</h3>
+            <p class="meta">250 kWp · Nagpur, Maharashtra</p>
+            <p>Ruggedized pumps, storage-ready architecture, and farmer-first service design.</p>
           </div>
         </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="badge">Captive power</span>
-          <span class="badge">Mini-grid projects</span>
-          <span class="badge">Commercial & industrial</span>
-          <span class="badge">Large home systems</span>
-          <span class="badge">Solar streetlighting</span>
-          <span class="badge">Utility-scale ground mount</span>
-          <span class="badge">Rooftop on/off-grid</span>
+        <div class="categories">
+          <span class="chip">Captive power</span>
+          <span class="chip">Mini-grids</span>
+          <span class="chip">Commercial & industrial</span>
+          <span class="chip">Large home systems</span>
+          <span class="chip">Solar streetlighting</span>
+          <span class="chip">Utility-scale</span>
+          <span class="chip">On/Off-grid rooftops</span>
         </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <button class="gallery-item" data-image="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80" aria-label="Gallery image">
-            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Ground mounted solar" class="object-cover w-full h-full">
-          </button>
-          <button class="gallery-item" data-image="https://images.unsplash.com/photo-1505739773573-7a358d152f5f?auto=format&fit=crop&w=1400&q=80" aria-label="Gallery image">
-            <img src="https://images.unsplash.com/photo-1505739773573-7a358d152f5f?auto=format&fit=crop&w=800&q=80" alt="Technician working on solar panels" class="object-cover w-full h-full">
-          </button>
-          <button class="gallery-item" data-image="https://images.unsplash.com/photo-1584270354949-1f85c5c81f7b?auto=format&fit=crop&w=1400&q=80" aria-label="Gallery image">
-            <img src="https://images.unsplash.com/photo-1584270354949-1f85c5c81f7b?auto=format&fit=crop&w=800&q=80" alt="Rooftop solar on warehouse" class="object-cover w-full h-full">
-          </button>
-          <button class="gallery-item" data-image="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=1400&q=80" aria-label="Gallery image">
-            <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=800&q=80" alt="Solar farm" class="object-cover w-full h-full">
-          </button>
-          <button class="gallery-item" data-image="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1400&q=80" aria-label="Gallery image">
-            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=80" alt="Solar carport" class="object-cover w-full h-full">
-          </button>
-          <button class="gallery-item" data-image="https://images.unsplash.com/photo-1582719478248-54e9f2af68a0?auto=format&fit=crop&w=1400&q=80" aria-label="Gallery image">
-            <img src="https://images.unsplash.com/photo-1582719478248-54e9f2af68a0?auto=format&fit=crop&w=800&q=80" alt="Engineers analyzing solar data" class="object-cover w-full h-full">
-          </button>
+        <div class="gallery">
+          <div class="gallery-item" data-full="https://images.unsplash.com/photo-1584270354949-1f3e1c5a7cde?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1584270354949-1f3e1c5a7cde?auto=format&fit=crop&w=800&q=80" alt="Ground-mounted solar farm">
+          </div>
+          <div class="gallery-item" data-full="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solar engineers">
+          </div>
+          <div class="gallery-item" data-full="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80" alt="Rooftop solar panels">
+          </div>
+          <div class="gallery-item" data-full="https://images.unsplash.com/photo-1505739777891-65c02a07ee26?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1505739777891-65c02a07ee26?auto=format&fit=crop&w=800&q=80" alt="Technician checking solar panels">
+          </div>
+          <div class="gallery-item" data-full="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=800&q=80" alt="Solar carport">
+          </div>
+          <div class="gallery-item" data-full="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=80" alt="Utility solar plant">
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="clients" class="py-16 lg:py-20 bg-white border-y border-slate-100">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div class="flex flex-col gap-3 text-center">
-          <p class="text-sm font-semibold text-teal">Our Clients & Partners</p>
-          <h2 class="text-3xl font-bold text-dark">Trusted by innovators in clean energy</h2>
-          <p class="text-slate-600 max-w-3xl mx-auto">Partnering with leading solar IPPs, developers, and industrial clients across India.</p>
+      <section class="section clients" id="clients">
+        <div class="section-header">
+          <p class="eyebrow">Clients & Partners</p>
+          <h2>Trusted by energy leaders</h2>
+          <p class="section-lead">Working with IPPs, industrials, campuses, and developers across India.</p>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          <div class="logo-tile">Client A</div>
-          <div class="logo-tile">Client B</div>
-          <div class="logo-tile">Client C</div>
-          <div class="logo-tile">Client D</div>
-          <div class="logo-tile">Client E</div>
-          <div class="logo-tile">Client F</div>
+        <div class="logo-grid glass">
+          <div class="logo-box">Client A</div>
+          <div class="logo-box">Client B</div>
+          <div class="logo-box">Client C</div>
+          <div class="logo-box">Client D</div>
+          <div class="logo-box">Client E</div>
+          <div class="logo-box">Partner X</div>
+          <div class="logo-box">Partner Y</div>
+          <div class="logo-box">Partner Z</div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="careers" class="py-16 lg:py-24 bg-gradient-to-r from-slate-900 via-dark to-slate-900 text-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
-        <div class="space-y-4">
-          <p class="text-sm font-semibold text-mint">Careers</p>
-          <h2 class="text-3xl font-bold">Grow with a purpose-driven team</h2>
-          <p class="text-white/80">Opportunity to learn, grow, and work on impactful clean energy projects. We emphasize training, safety, ethics, and innovation across every delivery.</p>
-          <a href="mailto:careers@sunorbit.in" class="inline-flex w-max items-center gap-2 px-5 py-3 rounded-full bg-mint text-dark font-semibold shadow hover:-translate-y-0.5 transition">Write to careers@sunorbit.in</a>
+      <section class="section careers" id="careers">
+        <div class="section-header">
+          <p class="eyebrow">Careers</p>
+          <h2>Build India’s clean energy future</h2>
+          <p class="section-lead">Join a team that values engineering excellence, safety, and innovation.</p>
         </div>
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-            <p class="text-lg font-semibold">Safety-first culture</p>
-            <p class="text-white/70 text-sm">Structured trainings and audits keep every site protected.</p>
-          </div>
-          <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-            <p class="text-lg font-semibold">Innovation & learning</p>
-            <p class="text-white/70 text-sm">Cross-functional exposure with digital tools and analytics.</p>
-          </div>
-          <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-            <p class="text-lg font-semibold">Impactful work</p>
-            <p class="text-white/70 text-sm">Deliver projects that decarbonize industries and communities.</p>
-          </div>
-          <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
-            <p class="text-lg font-semibold">Inclusive growth</p>
-            <p class="text-white/70 text-sm">Collaborative team culture with transparent opportunities.</p>
-          </div>
+        <div class="careers-content glass">
+          <p>Learn fast, design boldly, and deliver responsibly on impactful solar projects. We prioritize training, safety, ethics, and continuous improvement across all sites.</p>
+          <a class="pill-btn" href="mailto:careers@sunorbit.in">Write to careers@sunorbit.in</a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact" class="py-16 lg:py-24">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        <div class="text-center space-y-3">
-          <p class="text-sm font-semibold text-teal">Contact</p>
-          <h2 class="text-3xl font-bold text-dark">Let’s build your solar project</h2>
-          <p class="text-slate-600 max-w-3xl mx-auto">We’re ready to scope, design, and deliver your next solar or clean energy initiative.</p>
+      <section class="section contact" id="contact">
+        <div class="section-header">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s engineer your next solar asset</h2>
+          <p class="section-lead">Tell us about your project—our team will respond with the right approach.</p>
         </div>
-        <div class="grid lg:grid-cols-3 gap-8 items-start">
-          <div class="lg:col-span-1 space-y-4">
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-dark">SunOrbit Solutions Pvt. Ltd.</h3>
-              <p class="text-slate-700">Gautam Buddha Nagar, Uttar Pradesh, India</p>
-              <p class="text-slate-700">Email: <span class="font-semibold">info@sunorbit.in</span></p>
-              <p class="text-slate-700">Phone: <span class="font-semibold">+91-XXXXXXXXXX</span></p>
-              <button id="contactWhatsapp" class="w-full inline-flex justify-center items-center gap-2 px-4 py-3 rounded-xl bg-teal text-white font-semibold shadow hover:-translate-y-0.5 transition">Chat on WhatsApp</button>
-              <div class="rounded-xl overflow-hidden border border-slate-100 shadow-sm">
-                <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.731457769483!2d77.3799945750108!3d28.669156575657306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce51ee19001c9%3A0x93fc7027c003a650!2sNoida%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1716828264000!5m2!1sen!2sin" allowfullscreen loading="lazy" class="w-full h-48"></iframe>
-              </div>
+        <div class="contact-grid">
+          <div class="contact-info glass">
+            <h3>SunOrbit Solutions Pvt. Ltd.</h3>
+            <p>Gautam Buddha Nagar, Uttar Pradesh, India</p>
+            <p>Email: info@sunorbit.in</p>
+            <p>Phone: +91-XXXXXXXXXX</p>
+            <a class="pill-btn" id="contact-whatsapp">Chat on WhatsApp</a>
+            <div class="map-wrapper">
+              <iframe title="SunOrbit location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.032011551917!2d77.36119131506214!3d28.535516982452537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a7abcb7f37%3A0xdeb2ed55ef3f1423!2sNoida%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sus!4v1618231234567!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
-          <div class="lg:col-span-2 bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
-            <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div class="md:col-span-1">
-                <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Name *</label>
-                <input id="name" name="name" type="text" class="input" required>
-                <p class="error" data-error-for="name"></p>
+          <div class="contact-form glass">
+            <form id="enquiry-form" novalidate>
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+                <small class="error" data-for="name"></small>
               </div>
-              <div class="md:col-span-1">
-                <label for="company" class="block text-sm font-medium text-slate-700 mb-1">Company</label>
-                <input id="company" name="company" type="text" class="input">
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Optional">
+                <small class="error" data-for="company"></small>
               </div>
-              <div class="md:col-span-1">
-                <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email *</label>
-                <input id="email" name="email" type="email" class="input" required>
-                <p class="error" data-error-for="email"></p>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error" data-for="email"></small>
               </div>
-              <div class="md:col-span-1">
-                <label for="phone" class="block text-sm font-medium text-slate-700 mb-1">Phone *</label>
-                <input id="phone" name="phone" type="tel" class="input" required>
-                <p class="error" data-error-for="phone"></p>
+              <div class="form-group">
+                <label for="phone">Phone *</label>
+                <input type="tel" id="phone" name="phone" required>
+                <small class="error" data-for="phone"></small>
               </div>
-              <div class="md:col-span-1">
-                <label for="projectType" class="block text-sm font-medium text-slate-700 mb-1">Project Type</label>
-                <select id="projectType" name="projectType" class="input">
+              <div class="form-group">
+                <label for="project">Project Type</label>
+                <select id="project" name="project">
                   <option>Rooftop</option>
                   <option>Ground Mount</option>
                   <option>O&M</option>
@@ -443,46 +349,39 @@
                   <option>Other</option>
                 </select>
               </div>
-              <div class="md:col-span-1">
-                <div class="block text-sm font-medium text-transparent mb-1" aria-hidden="true">&nbsp;</div>
-                <button id="contactSubmit" type="submit" class="w-full inline-flex justify-center items-center gap-2 px-4 py-3 rounded-xl bg-dark text-white font-semibold shadow hover:-translate-y-0.5 transition">Send enquiry</button>
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <small class="error" data-for="message"></small>
               </div>
-              <div class="md:col-span-2">
-                <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Message *</label>
-                <textarea id="message" name="message" rows="4" class="input" required></textarea>
-                <p class="error" data-error-for="message"></p>
-              </div>
-              <div class="md:col-span-2">
-                <p id="formStatus" class="text-sm font-semibold text-teal hidden">Your email client has opened. Please review and send your enquiry.</p>
-              </div>
+              <button type="submit" class="cta primary" id="submit-btn">Send enquiry</button>
+              <p class="form-note">Your email client will open with the details. Please review and send.</p>
+              <p class="success-msg" role="status"></p>
             </form>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer class="border-t border-slate-100 bg-white py-8">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-3">
-      <p class="text-sm text-slate-600">© SunOrbit Solutions Pvt. Ltd. All rights reserved.</p>
-      <div class="flex gap-3 text-sm text-slate-600">
-        <a href="#home" class="hover:text-teal">Home</a>
-        <a href="#services" class="hover:text-teal">Services</a>
-        <a href="#contact" class="hover:text-teal">Contact</a>
+    <footer class="footer">
+      <p>© <span id="year"></span> SunOrbit Solutions Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
       </div>
+    </footer>
+
+    <div class="floating-cta">
+      <button id="float-whatsapp" aria-label="WhatsApp chat">WhatsApp</button>
+      <button id="float-top" aria-label="Back to top">↑</button>
     </div>
-  </footer>
 
-  <button id="floatingWhatsapp" class="fixed bottom-5 right-5 z-40 h-14 w-14 rounded-full bg-teal text-white shadow-2xl flex items-center justify-center hover:-translate-y-0.5 transition">
-    <span class="text-2xl">💬</span>
-    <span class="sr-only">Chat on WhatsApp</span>
-  </button>
-
-  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
-    <div class="lightbox-backdrop"></div>
-    <div class="lightbox-content">
-      <button id="lightboxClose" class="lightbox-close" aria-label="Close">×</button>
-      <img id="lightboxImage" src="" alt="Expanded gallery image" class="w-full h-full object-contain" />
+    <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close">×</button>
+        <img src="" alt="Expanded project visual" id="lightbox-img">
+      </div>
     </div>
   </div>
 
